@@ -7,7 +7,7 @@ export const PokemonListView = ({ list }: { list: Pokemon[] }) => (
       {list.map(({ name, type }) => (
         <tr key={name}>
           <td>
-            <strong>{name}!!</strong>
+            <strong>{name}</strong>
           </td>
           <td>{type}</td>
         </tr>
