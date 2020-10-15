@@ -42,7 +42,7 @@ module.exports = {
       name: "tshost",
       filename: "remoteEntry.js",
       remotes: {
-        "tsremote-mf": "tsremote@http://localhost:8080/remoteEntry.js",
+        "ts-remote-types": "tsremote@http://localhost:8080/remoteEntry.js",
       },
       exposes: {},
       shared: require("./package.json").dependencies,

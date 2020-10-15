@@ -1,18 +1,17 @@
-import React from "react";
+import * as React from "react";
+import "./remotes.d";
 
-import { Pokemon } from "shared-types";
-
-const PokemonListView = ({ list }: { list: Pokemon[] }) => (
+export const PokemonListView = ({ list }: { list: Pokemon[] }) => (
   <table>
-    {list.map(({ name, type }) => (
-      <tr>
-        <td>
-          <strong>{name}</strong>
-        </td>
-        <td>{type}</td>
-      </tr>
-    ))}
+    <tbody>
+      {list.map(({ name, type }) => (
+        <tr key={name}>
+          <td>
+            <strong>{name}!!</strong>
+          </td>
+          <td>{type}</td>
+        </tr>
+      ))}
+    </tbody>
   </table>
 );
-
-export default PokemonListView;

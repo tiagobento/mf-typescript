@@ -1,4 +1,4 @@
-import { Pokemon, PokemonListFunction } from "shared-types";
+import "./remotes.d";
 
 const pokemon: Pokemon[] = [
   {
@@ -11,7 +11,6 @@ const pokemon: Pokemon[] = [
   },
 ];
 
-const getList: PokemonListFunction = (nameFilter: string) =>
-  pokemon.filter(({ name }) => name.includes(nameFilter));
-
-export default getList;
+export const getList = (nameFilter: string) => {
+  return pokemon.filter(({ name }) => name.includes(nameFilter));
+};

@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
-import getList from "./pokemonList";
-import PokemonListView from "./PokemonListView";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
 import "./index.css";
+
+import { getList } from "./pokemonList";
+import { PokemonListView } from "./PokemonListView";
 
 const App = () => (
   <div>

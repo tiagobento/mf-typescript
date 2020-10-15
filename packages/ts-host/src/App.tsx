@@ -1,21 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-import "./tsremote-mf-decl.d";
-
-import { PokemonListFunction, PokemonListComponent } from "shared-types";
-import getList from "tsremote-mf/pokemonList";
-import PokemonListView from "tsremote-mf/PokemonListView";
 import "./index.css";
 
-const PokemonComp = PokemonListView as PokemonListComponent;
-
-const getPokemonList = getList as PokemonListFunction;
+import "ts-remote";
+import { getList } from "ts-remote-types/pokemonList";
+import { PokemonListView } from "ts-remote-types/PokemonListView";
 
 const App = () => (
   <div>
-    <h1>TS-HOST</h1>
-    <PokemonComp list={getPokemonList("Bulb")} />
+    <h1>TS-HOST (this consumes TS-REMOTE modules)</h1>
+    <PokemonListView list={getList("Bulb")} />
   </div>
 );
 
